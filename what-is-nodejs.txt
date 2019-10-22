@@ -1,0 +1,31 @@
+Exercises
+
+1. In your own words highlight the differences in functionality and purposes Client-Side and Server-Side code serves in a full-stack web application.
+
+A: There are many differences in how code runs on the client side and the server side. For example, everything that is rendered in the client's browser is done on the client side. The JavaScript on the client side interacts with the document object in order to display web pages on their computer. In contrast, Node.js on the server side does not even have a document object built in. Also, the client side code is designed to interact directly with the client. Whether it is though mouse click, text or voice data the client side code and sends requests to the server based on what the user is requesting. The server side code is designed to handle these requests and send the proper responses. The server can make HTTP requests or access databases depending on the clients needs. The server sends the responses back to the client were the data is rendered on the clients browser.
+
+2. What explains Nodes' rise in popularity and use? What does "Isomorphic JavaScript programming" mean? Provide some real-world examples not listed in this checkpoint of companies using Node.js.
+
+A: One of the major advantages of using Node.js, as opposed to PHP, Java or Python, on the server side is that Node.js uses the JavaScript language. This means that both the client side and the server side use the same coding language making it easier for full stack developers to work on both the front end and the back end simultaneously. Previous technologies relied on a synchronous request and response cycle. Each request in a thread had to be fulfilled before the next request was addressed. Using Node.js also allows for asynchronous requests and responses on both the front and back end. JavaScript can send request after request on the client side without having to wait for the response for each individual request. Conversely, Javascript can handle requests on the server side without having to send a response for each one individually. The JavaScript on either end does not need to complete each request response cycle before starting a new one.
+
+Using Javascript to build your web application on the front end as well as the back end is known as Isomorphic JavaScript programming. There are many advantages to using Isomorphic JavaScript programming:
+
+1. JavaScript is the programming language on both the front end and the back end so there is no need to learn a separate language. This can also make maintenance easier for the developer. 
+
+2. Single page applications will typically see an increase in speed. With Isomorphic JavaScript programming not all Javascript must be parsed on the client side. With some JavaScript running on the server, page load times can increase dramatically.
+
+3. Search engine optimization is easier to implement. Single page applications that run entirely within the client’s browser can not be reached by web crawlers. Because Isomorphic JavaScript programming has the some of the code running on the server they can read by crawlers and indexed by the search engines.
+
+There are plenty of companies currently using Node.js for their web applications:
+
+1. Walmart chose to adopt Node.js to help handle the millions of request they get every single day.
+
+2. Trello uses Node.js to improve the speed of their SPAs.
+
+3. Medium chose to implement Node.js partly because of its scalability. They want to be ready for more traffic in the future.
+
+4. Groupon migrated to Node.js because their previous platform became difficult to maintain.
+
+3. Draw a diagram of a full-stack web application and its key components.
+
+A: https://www.dropbox.com/s/nt3du2z3sdzd5zq/Fullstack-Diagram.jpg?dl=0
