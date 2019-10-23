@@ -1,0 +1,47 @@
+Exercises
+
+Questions
+
+1. Why is the fs core module important for Node development?
+
+A: The fs core module is important because it adds much needed server side functionality to JavaScript. The fs module allows Node to interact with the file system on the server, allowing it to read, write, delete, copy, update and manage files and folders.  
+
+2: What is the difference between sync and non-sync methods in the fs module?
+
+A: The sync methods in the fs module are methods that are performed synchronously or in sequence. Each time a method is called the program will wait for the response before moving on to the next line of code. The non-sync methods are methods that are asynchronous. An asynchronous method does not wait for the response before executing the rest of the program.
+
+3. Why are modules used?
+
+A: Modules are used for several different reasons. Modules help to split up the code making easier to read and debug. This also makes the code easier to upgrade as each module can be upgraded separately while leaving the bulk of the code untouched. Because the code is split up, it also becomes reusable. Modules can be used over and over again as needed help to cut down on the amount of code that needs to be written for a piece of software (DRY).
+
+4. Why are libraries such as fs used in Node programming?
+
+A: Libraries such as fs are used to add functionality that is not native to JavaScript. JavaScript was originally written to only run in a browser. It really did not have the tools to interact with the file system or any of the higher function on the computer it was running on. Node fs and other libraries allow JavaScript to interact with the computer's file system and many of its higher functions. JavaScript would not be able to perform essential server side tasks without these libraries.
+
+Code Practice
+
+1. Create a Github repo called simple-http-node-server. Create an HTTP server on port 3000 with a request handler that creates a file named hello-world.txt. You will be using the fs module to do this. Write the content: "Hello to this great world" to the hello-world.txt file. Please submit your finished code in your submission.
+
+const http = require('http');
+const fs = require('fs');
+const port = 3000;
+
+const requestHandler = (request, response) => {
+  response.end(`Handling a request on port ${port}`)
+  try {
+    fs.writeFileSync('hello-world.txt', 'Hello to this great world', 'utf8');
+    console.log('File written successfully');
+  } catch (err) {
+    console.log(JSON.stringify(err));
+  }
+};
+
+const server = http.createServer(requestHandler);
+
+server.listen(port, (err) => {
+  if (err) {
+    return console.log(`Error: ${err}`);
+  }
+
+  console.log(`Server is listening on ${port}`)
+});
